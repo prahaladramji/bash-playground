@@ -1,6 +1,6 @@
 .PHONY : start stop clean exec
 PWD = $(shell pwd)
-PORTS ?= "-p 80:80 -p 3000:3000 -p 9090:9090"
+PORTS ?= -p 9090:9090 -p 3000:3000 -p 9100:9100
 
 start:
 	@docker run -d --privileged --rm -it --name centos $(PORTS) \
